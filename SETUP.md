@@ -17,9 +17,7 @@ You should see a folder called `alpha-church` inside the `themes` directory that
 
 ## Configuration
 
-In the next step navigate to the `exampleSite` folder at `themes/alpha-church/exampleSite/` and
-copy `config.toml` from the exampleSite folder into the root folder of your Hugo site. 
-Then delete the line which says `themesDir = "../.."`.
+In the next step navigate to the `exampleSite` folder at `themes/alpha-church/exampleSite/` and copy `config.toml` from the exampleSite folder into the root folder of your Hugo site. Then delete the line which says `themesDir = "../.."`.
 
 (Please refer to https://gohugo.io/overview/quickstart/ for installing a Hugo theme.)
 
