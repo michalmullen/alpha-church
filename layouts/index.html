@@ -11,16 +11,6 @@
 			{{ "<!-- Main -->" | safeHTML }}
 				<section id="main" class="container">
 
-					{{ if .Params.Services.title }}
-					<section class="box special">
-						<header class="major">
-							<h2>{{ .Params.Services.title }}</h2><a name="services"></a>
-							<p>{{ .Params.Services.text | markdownify }}</p>
-						</header>
-						{{ partial "map" . }}
-					</section>
-					{{ end }}
-
 					{{ if .Params.Feature_icons.enable }}
 						{{ $tiles := .Params.Feature_icons.tile }}
 						{{ $len := (len $tiles) }}
@@ -69,6 +59,13 @@
 							{{ end }} {{/* end range $tiles*/}}
 					</div>
 					{{ end }} {{/* end if Feature_images*/}}
+
+					{{ if .Params.Services.title }}
+					<section class="box special">
+						<h3>{{ .Params.Services.title }}</h3>
+						<p>{{ .Params.Services.text | markdownify }}</p>
+					</section>
+					{{ end }}
 
 				</section>
 
