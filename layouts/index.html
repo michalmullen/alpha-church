@@ -42,7 +42,6 @@
 							{{ range $index, $key := $tiles }}
 								<div class="col-6 col-12-narrower">
 									<section class="box special">
-										<span class="image featured"><img src="{{ $key.image | absURL}}" alt="" /></span>
 										<h3>{{ $key.title }}</h3>
 										<p>{{ $key.text | markdownify }}</p>
 										{{ if $key.button_text }}
@@ -50,6 +49,7 @@
 												<li><a href="{{ $key.url | absURL }}" class="button alt">{{ $key.button_text }}</a></li>
 											</ul>
 											{{ end }}
+										<span class="image featured"><img src="{{ $key.image | absURL}}" alt="" /></span>
 										</section>
 									</div>
 									{{ if and (mod $index 2) (lt (add $index 1) $len) }}
@@ -64,6 +64,7 @@
 					<section class="box special">
 						<h3>{{ .Params.Services.title }}</h3>
 						<p>{{ .Params.Services.text | markdownify }}</p>
+						<span class="image featured"><img src="{{ .Params.Services.image | absURL}}" alt="" /></span>
 					</section>
 					{{ end }}
 
